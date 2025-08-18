@@ -1,0 +1,39 @@
+:root {
+  --spray-ui-background: 0 0% 100%;
+  --spray-ui-foreground: 222.2 84% 4.9%;
+
+  --spray-ui-primary: 222.2 47.4% 11.2%;
+  --spray-ui-primary-foreground: 210 40% 98%;
+
+  --spray-ui-secondary: 210 40% 96.1%;
+  --spray-ui-secondary-foreground: 222.2 47.4% 11.2%;
+
+  --spray-ui-accent: 210 40% 96.1%;
+  --spray-ui-accent-foreground: 222.2 47.4% 11.2%;
+
+  --spray-ui-destructive: 0 62.8% 30.6%;
+
+  --spray-ui-ring: 222.2 84% 4.9%;
+  --spray-ui-border: 214.3 31.8% 91.4%;
+  --spray-ui-input: 214.3 31.8% 91.4%;
+}
+
+.dark {
+  --spray-ui-background: 224 71% 4%;
+  --spray-ui-foreground: 213 31% 91%;
+
+  --spray-ui-primary: 210 40% 98%;
+  --spray-ui-primary-foreground: 222.2 47.4% 11.2%;
+
+  --spray-ui-secondary: 217.2 32.6% 17.5%;
+  --spray-ui-secondary-foreground: 210 40% 98%;
+
+  --spray-ui-accent: 217.2 32.6% 17.5%;
+  --spray-ui-accent-foreground: 210 40% 98%;
+
+  --spray-ui-destructive: 0 63% 31%;
+
+  --spray-ui-ring: 212.7 26.8% 83.9%;
+  --spray-ui-border: 217.2 32.6% 17.5%;
+  --spray-ui-input: 217.2 32.6% 17.5%;
+}

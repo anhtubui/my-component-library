@@ -1,6 +1,6 @@
 {
   "name": "my-component-library-1204",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",

@@ -26,8 +26,8 @@ export default {
     resolve(),
     commonjs(),
     postcss({
-      modules: true,
-      extract: false,
+      modules: { auto: /\.module\.css$/ },
+      extract: "styles/styles.css",
       inject: false,
       minimize: true,
     }),
