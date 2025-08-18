@@ -27,7 +27,7 @@ export default {
     commonjs(),
     postcss({
       modules: { auto: /\.module\.css$/ },
-      extract: "styles/styles.css",
+      extract: "styles.css",
       inject: false,
       minimize: true,
     }),
