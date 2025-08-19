@@ -14,27 +14,13 @@ pnpm add my-component-library-1204
 
 ## Importing CSS Variables
 
-To use the component library's CSS variables (design tokens), you need to import the CSS file. Here are the different ways to do it:
+To use the component library's CSS variables (design tokens), you need to import the CSS file.
 
-### Option 1: Direct CSS Import (Recommended)
+### Direct CSS Import (Recommended)
 
 ```javascript
 // In your main entry file (e.g., index.js, App.js, main.jsx)
 import "my-component-library-1204/styles.css";
-```
-
-### Option 2: Using the style field
-
-```javascript
-// Some bundlers support this syntax
-import "my-component-library-1204/dist/styles.css";
-```
-
-### Option 3: Side-effect import from the library
-
-```javascript
-// Import the global styles module (includes CSS variables)
-import "my-component-library-1204/styles/global";
 ```
 
 ## Using Components
@@ -70,6 +56,65 @@ function App() {
   );
 }
 ```
+
+## Available Hooks
+
+### useIsMobile
+
+A React hook that detects if the current viewport is mobile-sized and provides real-time updates when the screen size changes.
+
+#### Features
+
+- **Responsive Detection**: Uses `window.matchMedia` to detect mobile breakpoints
+- **Real-time Updates**: Automatically updates when the window is resized
+- **SSR Safe**: Handles server-side rendering gracefully
+- **TypeScript Support**: Fully typed with TypeScript
+
+#### Mobile Breakpoint
+
+The hook considers screens smaller than **768px** as mobile devices.
+
+#### Usage
+
+```jsx
+import { useIsMobile } from "my-component-library-1204";
+
+function ResponsiveComponent() {
+  const isMobile = useIsMobile();
+
+  return (
+    <div>{isMobile ? <div>Mobile Layout</div> : <div>Desktop Layout</div>}</div>
+  );
+}
+```
+
+#### Advanced Usage
+
+```jsx
+import { useIsMobile } from "my-component-library-1204";
+
+function Navigation() {
+  const isMobile = useIsMobile();
+
+  return <nav>{isMobile ? <MobileMenu /> : <DesktopMenu />}</nav>;
+}
+
+function ProductGrid() {
+  const isMobile = useIsMobile();
+
+  return (
+    <div className={`grid ${isMobile ? "grid-cols-1" : "grid-cols-3"}`}>
+      {/* Product items */}
+    </div>
+  );
+}
+```
+
+#### Return Value
+
+- **Type**: `boolean`
+- **Description**: `true` if the viewport width is less than 768px, `false` otherwise
+- **Initial Value**: `false` (to prevent hydration mismatches)
 
 ## Available CSS Variables
 

@@ -1,3 +1,6 @@
+// For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
+import storybook from "eslint-plugin-storybook";
+
 import js from '@eslint/js';
 import reactPlugin from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
@@ -76,4 +79,4 @@ export default tseslint.config([
 
   /* --- Turn off formatting rules that conflict with Prettier (MUST be last) --- */
   prettierConfig,
-]);
+], storybook.configs["flat/recommended"]);
